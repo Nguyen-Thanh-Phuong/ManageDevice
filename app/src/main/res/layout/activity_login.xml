@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity"
+    android:background="#efefef"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="0dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/edtUser"
+        android:background="@drawable/bgr_edt_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Username"
+        android:layout_marginBottom="25dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="20dp"
+        android:layout_marginBottom="5dp"
+        />
+    <EditText
+        android:id="@+id/edtPass"
+        android:background="@drawable/bgr_edt_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Username"
+        />
+    <Button
+        android:id="@+id/btnSubmitLogin"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:background="@drawable/bgr_btn_normal"
+        android:text="LOGIN"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="forgot password"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>
