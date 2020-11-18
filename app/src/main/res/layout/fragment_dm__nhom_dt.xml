@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DM_NhomDT_Fragment"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/insert"
+            android:layout_gravity="center"
+            />
+        <include android:id="@+id/code_panel" layout="@layout/text_edt"/>
+        <include android:id="@+id/name_panel" layout="@layout/text_edt"/>
+        <include layout="@layout/btn_layout"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <include layout="@layout/recycler_layout" android:visibility="gone"/>
+
+    <ImageView
+
+        android:id="@+id/img_up_down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/up_squared_64px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

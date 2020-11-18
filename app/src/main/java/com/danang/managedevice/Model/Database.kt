@@ -1,18 +1,18 @@
 package com.danang.managedevice.Model
 
 import android.os.AsyncTask
+import android.util.Log
 import org.ksoap2.SoapEnvelope
+import org.ksoap2.SoapFault
 import org.ksoap2.serialization.SoapObject
 import org.ksoap2.serialization.SoapSerializationEnvelope
 import org.ksoap2.transport.HttpTransportSE
 import java.lang.Exception
 
-class Database :AsyncTask<String,Void,String>(){
-    var commData:ComunicationData?=null;
-    var METHOD_WEB_SERVICES:String ="";
+class Database(private var commData:ComunicationData?=null, private var METHOD_WEB_SERVICES:String ="") :AsyncTask<String,Void,String>(){
     var resultString:String=""
-
     companion object{
+        final val networkTimeOut = 60*1000;
         //if you using Localhost . you must using 10.0.2.2 address ip v4
         private val URL = "http://10.0.2.2/Manage/Services.asmx?WSDL";
         private val NAMESPACE = "http://tempuri.org/";
@@ -27,7 +27,7 @@ class Database :AsyncTask<String,Void,String>(){
         val evelone = SoapSerializationEnvelope(SoapEnvelope.VER11)
         evelone.dotNet =true;
         evelone.setOutputSoapObject(requestObj);
-        val httpTransportSE = HttpTransportSE(URL);
+        val httpTransportSE = HttpTransportSE(URL, networkTimeOut);
         try {
             httpTransportSE.call(SOAP_ACTION,evelone);
             val obj = evelone.bodyIn as SoapObject

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DM_NhomDT_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="50dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/insert" />
+
+            <include
+                android:id="@+id/code_panel"
+                layout="@layout/text_edt" />
+
+            <include
+                android:id="@+id/name_panel"
+                layout="@layout/text_edt" />
+
+            <include
+                android:id="@+id/dvt_panel"
+                layout="@layout/text_edt" />
+
+            <include
+                android:id="@+id/type_panel"
+                layout="@layout/text_edt" />
+
+            <include
+                android:id="@+id/makt_panel"
+                layout="@layout/text_edt" />
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/txv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn Mã DT:"
+                    android:textSize="22sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dp"
+                    />
+                <ImageView
+                    android:id="@+id/imgDT"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/up_squared_64px"
+                    android:layout_toRightOf="@id/txv"
+                    android:layout_alignParentTop="true"
+                    />
+
+            </RelativeLayout>
+
+            <include layout="@layout/btn_layout" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <include layout="@layout/recycler_layout" android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rcc_NhomDT"
+        android:background="#fff"
+        android:visibility="gone"
+        />
+    <ImageView
+
+        android:id="@+id/img_up_down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/up_squared_64px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

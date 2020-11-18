@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ramotion.foldingcell.FoldingCell
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/txv_nhomdt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/play_fair"
+            android:text="Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txv_nhomdt_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Content"
+            app:layout_constraintStart_toStartOf="@+id/txv_nhomdt_title"
+            app:layout_constraintTop_toBottomOf="@+id/txv_nhomdt_title" />
+
+        <ImageView
+            android:id="@+id/imgDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgEdit"
+            app:layout_constraintTop_toTopOf="@+id/imgEdit"
+            app:srcCompat="@drawable/close" />
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/edit" />
+
+        <TextView
+            android:id="@+id/txv_dvt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/playfairdisplay_bolditalic"
+            android:text="Đơn Vị Tính"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txv_nhomdt_content"
+            app:layout_constraintTop_toBottomOf="@+id/txv_nhomdt_content" />
+
+        <TextView
+            android:id="@+id/txv_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfairdisplay_bolditalic"
+            android:text="Loại :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txv_dvt"
+            app:layout_constraintTop_toBottomOf="@+id/txv_dvt" />
+
+        <TextView
+            android:id="@+id/txv_makt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfairdisplay_bolditalic"
+            android:text="Mã K.tra :"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txv_Type"
+            app:layout_constraintTop_toBottomOf="@+id/txv_Type" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/playfairdisplay_italic"
+            android:text="Nhóm Đối Tượng"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/txv_makt"
+            app:layout_constraintTop_toBottomOf="@+id/txv_makt" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/playfairdisplay_bolditalic"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            tools:layout_editor_absoluteX="10dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.ramotion.foldingcell.FoldingCell>

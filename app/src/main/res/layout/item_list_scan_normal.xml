@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ramotion.foldingcell.FoldingCell xmlns:tools="http://schemas.android.com/tools"
+    android:layout_below="@+id/root_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fold_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    folding-cell:cardBackgroundColor="#f5f5f5"
+    >
+    <include layout="@layout/item_list_scan_focus"/>
+    <androidx.cardview.widget.CardView
+        android:layout_margin="15dp"
+        android:id="@+id/cardView"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        folding-cell:cardCornerRadius="10dp"
+        folding-cell:cardElevation="6dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txv_Devices_Code"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:height="130dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Case and Power"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                folding-cell:layout_constraintBottom_toBottomOf="parent"
+                folding-cell:layout_constraintStart_toStartOf="parent"
+                folding-cell:layout_constraintTop_toTopOf="parent"
+                folding-cell:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="ATX"
+                android:textSize="24sp"
+                folding-cell:layout_constraintEnd_toEndOf="parent"
+                folding-cell:layout_constraintHorizontal_bias="0.0"
+                folding-cell:layout_constraintStart_toEndOf="@+id/txv_Devices_Code"
+                folding-cell:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txv_desciption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                folding-cell:layout_constraintStart_toEndOf="@+id/txv_Devices_Code"
+                folding-cell:layout_constraintTop_toBottomOf="@+id/txvType" />
+
+            <Button
+                android:id="@+id/btn_fix"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bgr_btn_normal"
+                android:text="Báo Hỏng"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                folding-cell:layout_constraintBottom_toBottomOf="parent"
+                folding-cell:layout_constraintEnd_toEndOf="parent"
+                folding-cell:layout_constraintTop_toTopOf="parent"
+                folding-cell:layout_constraintVertical_bias="0.533" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</com.ramotion.foldingcell.FoldingCell>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/source_fragment"
+    app:startDestination="@id/result_Search_QRFragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.danang.managedevice.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_DM_NhomDT_Fragment"
+            app:destination="@id/DM_NhomDT_Fragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_home_fragment_to_DM_NhomTB_Fragment"
+            app:destination="@id/DM_NhomTB_Fragment" />
+        <action
+            android:id="@+id/home_to_NTB"
+            app:destination="@id/DM_NhomTB_Fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.danang.managedevice.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.danang.managedevice.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_fragment_to_result_Search_QRFragment"
+            app:destination="@id/result_Search_QRFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/result_Search_QRFragment"
+        android:name="com.danang.managedevice.ui.search.Result_Search_QRFragment"
+        android:label="fragment_result__search__q_r"
+        tools:layout="@layout/fragment_result__search__q_r" >
+        <argument
+            android:name="maql"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/DM_NhomDT_Fragment"
+        android:name="com.danang.managedevice.ui.DM_NhomDT_Fragment"
+        android:label="fragment_dm__nhom_dt"
+        tools:layout="@layout/fragment_dm__nhom_dt" >
+        <action
+            android:id="@+id/action_DM_NhomDT_Fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DM_NhomTB_Fragment"
+        android:name="com.danang.managedevice.ui.DM_NhomTB_Fragment"
+        android:label="DM_NhomTB_Fragment"
+        tools:layout="@layout/fragment_d_m__nhom_tb">
+        <action
+            android:id="@+id/action_DM_NhomTB_Fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
+</navigation>

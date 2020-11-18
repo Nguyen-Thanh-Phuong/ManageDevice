@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.danang.managedevice.MainActivity
-import com.danang.managedevice.Model.AccountModel
-import com.danang.managedevice.Model.Login
+import com.danang.managedevice.Model.Account.AccountModel
+import com.danang.managedevice.Model.Account.Login
 import com.danang.managedevice.Object.Account
 import com.danang.managedevice.R
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity(),Login {
+class LoginActivity : AppCompatActivity(),
+    Login {
     val SUCCESS ="Sucess";
     val Failer = "Fail"
     var instances = AccountModel.instance;
@@ -31,6 +32,7 @@ class LoginActivity : AppCompatActivity(),Login {
             }
             instances.exec();
         }
+        supportActionBar?.hide();
     }
 
     override fun isLogin(msg:String) {

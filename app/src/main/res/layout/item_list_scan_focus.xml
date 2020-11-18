@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.search.Result_Search_QRFragment"
+    android:layout_marginBottom="20dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/bgr_edt_blue"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:id="@+id/txv_parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView7"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Người Nhập  :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toStartOf="@+id/txv_where_map"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/txv_where_map" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/parameters"
+        folding-cell:layout_constraintBottom_toBottomOf="@+id/txv_parameter"
+        folding-cell:layout_constraintStart_toStartOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="11dp"
+        android:text="Số chế tạo :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toEndOf="@+id/imageView"
+        folding-cell:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txv_user_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView13"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Thời gian B.Hành :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toStartOf="@+id/txv_parameter"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/txv_parameter" />
+
+    <TextView
+        android:id="@+id/txvSo_Che_Tao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView5"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/user_picture"
+        folding-cell:layout_constraintStart_toStartOf="@+id/imageView4"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/txv_where_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView12"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/txv_time_shied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView9"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ngày Nhập  :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toStartOf="@+id/txv_user_input"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/txv_user_input" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/clock"
+        folding-cell:layout_constraintStart_toStartOf="@+id/imageView5"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Nơi Sản Xuât :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toStartOf="@+id/txv_time_shied"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/txv_time_shied" />
+
+    <TextView
+        android:id="@+id/txv_date_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="KJ19JUN00007178"
+        folding-cell:layout_constraintStart_toStartOf="@+id/textView15"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/shield"
+        folding-cell:layout_constraintStart_toStartOf="@+id/imageView2"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/pin"
+        folding-cell:layout_constraintStart_toStartOf="@+id/imageView3"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Thông số :"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        folding-cell:layout_constraintStart_toStartOf="@+id/txvSo_Che_Tao"
+        folding-cell:layout_constraintTop_toBottomOf="@+id/txvSo_Che_Tao" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bgr_edt_blue"
+        android:src="@drawable/so_ban_tao"
+        folding-cell:layout_constraintStart_toStartOf="parent"
+        folding-cell:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

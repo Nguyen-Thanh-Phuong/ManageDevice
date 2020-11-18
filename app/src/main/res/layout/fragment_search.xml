@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="30dp">
+
+   <Button
+       android:id="@+id/btnScanCode"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/btn_selector"
+       android:text="Scanner With QR Code"
+       android:textColor="#fff"
+       android:textStyle="bold"
+       />
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_selector"
+        android:text="Scanner With Product Code"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>
