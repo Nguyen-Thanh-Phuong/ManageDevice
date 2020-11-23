@@ -7,7 +7,12 @@
     android:orientation="vertical"
     android:gravity="center"
     android:paddingHorizontal="30dp">
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="40dp"
+        />
    <Button
        android:id="@+id/btnScanCode"
        android:layout_width="match_parent"

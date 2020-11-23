@@ -74,8 +74,8 @@ public class DM_NhomTB_Fragment extends Fragment implements Send_To_View, SendDa
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        MainActivity activity = (MainActivity) getActivity();
-        activity.sendData(this);
+//        MainActivity activity = (MainActivity) getActivity();
+//        activity.sendData(this);
         root = inflater.inflate(R.layout.fragment_d_m__nhom_tb, container, false);
         edt_code = EdtLayout_Handle.Companion.getIns().setText_Hint(root.findViewById(R.id.code_panel),"Nhập Mã Đối Tượng","Input Devices Code");
         edt_name = EdtLayout_Handle.Companion.getIns().setText_Hint(root.findViewById(R.id.name_panel),"Nhập Tên Đối Tượng","Input Devices Name");
@@ -89,12 +89,6 @@ public class DM_NhomTB_Fragment extends Fragment implements Send_To_View, SendDa
 
         recyclerDT = root.findViewById(R.id.rcc_NhomDT);
         recyclerDT.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerDT.setOnScrollChangeListener(new View.OnScrollChangeListener() {
-            @Override
-            public void onScrollChange(View view, int i, int i1, int i2, int i3) {
-
-            }
-        });
 //
         imgView = root.findViewById(R.id.img_up_down);
 
@@ -104,14 +98,15 @@ public class DM_NhomTB_Fragment extends Fragment implements Send_To_View, SendDa
         /*
             SetDataListBox
          */
-//        DM_NhomTB dt = new DM_NhomTB("CDM",edt_name.getText()+"",edt_dvt.getText()+"",0,
-//                edt_makt.getText().toString(),edt_manhomdt.getText().toString());
+
+//        DMNhomTB dt = new DMNhomTB("CDM",edt_name.getText()+"",edt_dvt.getText()+"",0,
+//                edt_makt.getText().toString(),edt_code.getText().toString());
 //        new DM_NhomTB_model(dt,DM_NhomTB_model.Status.GETWITHCODE,this);
         new DM_NhomTB_model(DM_NhomTB_model.Status.GETALL,this::sendData);
         new DM_NhomDT_model(DM_NhomDT_model.Status.GETALL,this::sendData);
-        /*
-            SetData button
-        */
+//        /*
+//            SetData button
+//        */
         btn_Submit.setText(SUBMIT);
         btn_Submit.setOnClickListener(view -> {
             DMNhomTB data = new DMNhomTB(edt_code.getText()+"",edt_name.getText()+"",edt_dvt.getText()+"",0,

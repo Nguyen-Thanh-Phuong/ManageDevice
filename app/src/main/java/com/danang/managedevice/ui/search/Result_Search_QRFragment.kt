@@ -96,12 +96,17 @@ class Result_Search_QRFragment : Fragment(),SendDataMdToView,
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-//        if(arguments!=null)
-//        {
-//            val args = Result_Search_QRFragmentArgs.fromBundle(requireArguments());
-//            maql = args.maql;
-//        }
-        maql = "C001";
+        try
+        {
+            if(arguments!=null)
+            {
+                val args = Result_Search_QRFragmentArgs.fromBundle(requireArguments());
+                maql = args.maql;
+            }
+        }catch (ex:Exception)
+        {
+            return;
+        }
         root.findViewById<TextView>(R.id.textView);
         QLTB_Model.instances.apply {
             sendDataToView = this@Result_Search_QRFragment

@@ -60,7 +60,7 @@ class QL_TB_CT_Model :ComunicationData{
         when(state)
         {
             State.GET_WITH_CODE->
-                if(!fill_MaQL(soapObject))return false;
+                return fill_MaQL(soapObject);
         }
         return true;
     }
